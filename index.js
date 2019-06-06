@@ -1,18 +1,16 @@
 const express = require('express');
 
 
-const knex = require('knex');
-const knexConfig = require('./knexfile.js')
-const db = knex(knexConfig.development);
+// const knex = require('knex');
+// const knexConfig = require('./knexfile.js')
+// const db = knex(knexConfig.development);
+
+const db = require('./dbConfig.js')
 
 const server = express();
 
 server.use(express.json());
 
-// server.get('/', async (req, res) => {
-//     // get the roles from the database
-//     res.status(200).json('Testing, Sanity Check')
-//   });
   
 server.get('/api/cohorts', async (req, res) => {
     // get the roles from the database

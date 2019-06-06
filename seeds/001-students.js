@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('students').insert([
-        {name: 'Cash Globe'},
-        {name: 'Vijay Das'},
-        {name: 'Thierry Harjoth'}
+        {name: 'Cash Globe', cohort_id: 1},
+        {name: 'Vijay Das', cohort_id: 1},
+        {name: 'Thierry Harjoth', cohort_id: 1}
       ]);
     });
 };

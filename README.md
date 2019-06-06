@@ -13,7 +13,7 @@ Build an API that persists data to SQLite3. []
 
 Use knex migrations to create a database called `lambda.db3` and add the following tables:
 
-#### cohorts []
+#### cohorts [x]
 
 - `id`: primary key, auto-increments.
 - `name`: text, required.

@@ -5,7 +5,9 @@ const express = require('express');
 // const knexConfig = require('./knexfile.js')
 // const db = knex(knexConfig.development);
 
-const db = require('./dbConfig.js')
+const Cohorts = require('./cohorts-model')
+
+// const db = require('./dbConfig.js')
 
 const server = express();
 
@@ -15,7 +17,7 @@ server.use(express.json());
 server.get('/api/cohorts', async (req, res) => {
     // get the roles from the database
     try {
-      const cohorts = await db('cohorts'); // all the records from the table
+      const cohorts = await Cohorts.find(); // all the records from the table
       res.status(200).json(cohorts);
     } catch (error) {
       res.status(500).json(error);
